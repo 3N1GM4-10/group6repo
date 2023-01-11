@@ -70,9 +70,132 @@ body {
     background-position: center;
     background-size: cover;
 }
-.shape{
+
+.shape0{
     width: 50px;
     height: 50px;
     background-color: red;
     position: absolute;
+    background: url(../images/circle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.shape1{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    background: url(../images/cone.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.shape2{
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    position: absolute;
+    background: url(../images/cube.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.shape3{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    background: url(../images/circle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.shape4{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    background: url(../images/cone.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.shape5{
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    position: absolute;
+    background: url(../images/cube.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.shape6{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    background: url(../images/circle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.shape7{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    background: url(../images/cone.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.shape8{
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    position: absolute;
+    background: url(../images/cube.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.shape9{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    background: url(../images/circle.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.shape10{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    background: url(../images/cone.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.shape11{
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    position: absolute;
+    background: url(../images/cube.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }

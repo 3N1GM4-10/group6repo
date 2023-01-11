@@ -40,7 +40,7 @@ function generateShapes() {
     let shapeBottom = 670;
     let shapeLeft = Math.floor(Math.random() * 340);
     let shape = document.createElement('div');
-    shape.setAttribute('class', 'shape')
+    shape.setAttribute('class', `shape${Math.floor(Math.random() * 12)}`)
     shapes.appendChild(shape);
     function fallDownShape(){
         if(shapeBottom < emojiBottom + 50 && shapeBottom > emojiBottom && shapeLeft > emojiLeft - 30 && shapeLeft < emojiLeft + 80) {
