@@ -29,6 +29,10 @@ function control(e){
     }
 }
 
+function displayScore() {
+    document.getElementById("score").innerHTML = `Score: ${score}`;
+}
+
 function generateShapes() {
     let shapeBottom = 670;
     let shapeLeft = Math.floor(Math.random() * 520);
@@ -39,7 +43,8 @@ function generateShapes() {
         if(shapeBottom < emojiBottom + 50 && shapeBottom > emojiBottom && shapeLeft > emojiLeft - 30 && shapeLeft < emojiLeft + 80) {
             shapes.removeChild(shape);
             clearInterval(fallInterval);
-            score++;
+            score += 10;
+            displayScore();
         }
         if(shapeBottom < emojiBottom){
             alert('Game over! Your Score is: ' + score);
