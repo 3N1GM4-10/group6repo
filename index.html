@@ -18,8 +18,13 @@
                 Score: 0
             </div>
         </div>
-        <button class="btn btn-outline-dark">&lt</button>
-        <button class="btn btn-outline-dark">&gt</button>
+        <div id="alertBox" class="alertBox">
+            <div id="gameOver"></div>
+            <div id="gameMessage"></div>
+            <div class="buttonReplay btn btn-primary px-4" onclick="replayGame()">Replay</div>
+        </div>
+        <div id="buttonLeft" class="buttonLeft btn btn-outline-dark px-4" onclick="moveEmojiLeft()">&lt</div>
+        <button id="buttonRight" class="buttonRight btn btn-outline-dark px-4" onclick="moveEmojiRight()">&gt</button>
     </div>
     <script src="./assets/js/script.js"></script>
 </body>

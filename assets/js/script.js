@@ -3,6 +3,9 @@ let emoji = document.querySelector('.emoji');
 let shapes = document.querySelector('.shapes');
 let emojiLeft = parseInt(window.getComputedStyle(emoji).getPropertyValue('left'));
 let emojiBottom = parseInt(window.getComputedStyle(emoji).getPropertyValue('bottom'));
+document.getElementById("buttonLeft").style.display = 'block';
+document.getElementById("buttonRight").style.display = 'block';
+document.getElementById("alertBox").style.display = "none";
 let score = 0;
 
 function moveEmojiLeft(){
@@ -13,7 +16,7 @@ function moveEmojiLeft(){
 }
 
 function moveEmojiRight(){
-    if (emojiLeft <= 480) {
+    if (emojiLeft <= 340) {
         emojiLeft += 70;
         emoji.style.left = emojiLeft + 'px';
     }
@@ -35,7 +38,7 @@ function displayScore() {
 
 function generateShapes() {
     let shapeBottom = 670;
-    let shapeLeft = Math.floor(Math.random() * 520);
+    let shapeLeft = Math.floor(Math.random() * 340);
     let shape = document.createElement('div');
     shape.setAttribute('class', 'shape')
     shapes.appendChild(shape);
@@ -47,10 +50,13 @@ function generateShapes() {
             displayScore();
         }
         if(shapeBottom < emojiBottom){
-            alert('Game over! Your Score is: ' + score);
+            document.getElementById("alertBox").style.display = 'block';
+            document.getElementById("gameOver").innerHTML = `Game Over!`;
+            document.getElementById("gameMessage").innerHTML = `Contents Here!`;
+            document.getElementById("buttonLeft").style.display = 'none';
+            document.getElementById("buttonRight").style.display = 'none';
             clearInterval(fallInterval);
-            clearInterval(shapeTimeout);
-            location.reload();
+            clearInterval(shapeTimeout); 
         }
         shapeBottom -= 7;
         shape.style.bottom = shapeBottom + 'px';
@@ -59,6 +65,10 @@ function generateShapes() {
     let fallInterval = setInterval(fallDownShape, 20);
     var shapeTimeout = setTimeout(generateShapes, 2000);
 }
+function replayGame(){
+location.reload();
+}
+
 generateShapes();
 
 document.addEventListener('keydown',control);
