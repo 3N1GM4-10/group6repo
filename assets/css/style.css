@@ -32,7 +32,7 @@ body {
     position: absolute;
     bottom: 15px;
     left: calc(50% - 40px);
-    background: url(./assets/images/smiley.png);
+    background: url(../images/smiley.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
