@@ -1,13 +1,45 @@
-.row{
-    background-color: darkblue;
+* {
+    margin: 0;
+    padding: 0;
 }
-
-.col img{
-    width:30px;
-
-    
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
 }
-
-.smiley{
-    width:90px;
+.canvas{
+    width: 560px;
+    height: 700px;
+    background-color: lightblue;
+    position: relative;
+    overflow: hidden;
+}
+.floor{
+    width: 100%;
+    height: 15px;
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+}
+.emoji{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: yellow;
+    position: absolute;
+    bottom: 15px;
+    left: calc(50% - 40px);
+    background: url(/images/smiley.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.shape{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
 }
