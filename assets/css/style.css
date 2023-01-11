@@ -19,7 +19,7 @@ body {
 }
 .floor{
     width: 100%;
-    height: 50px;
+    height: 100px;
     background-color: green;
     position: absolute;
     bottom: 0;
@@ -31,18 +31,18 @@ body {
     position: absolute;
     top: 0;
 }
-
+  
 .buttonLeft {
     font-size: 30px;
     position: absolute;
     left: 10px;
-    bottom: 10px;
+    bottom: 20px;
 }
 .buttonRight {
     font-size: 30px;
     position: absolute;
     right: 10px;
-    bottom: 10px;
+    bottom: 20px;
 }
 .alertBox{
     width: 300px;
@@ -50,7 +50,7 @@ body {
     position: absolute;
     background-color: aqua;
     left: calc(50% - 150px);
-    top: calc(50% - 100px);
+    top: calc(45% - 100px);
     border-radius: 5%;
     text-align: center;
 }
@@ -59,13 +59,12 @@ body {
     height: 80px;
     border-radius: 50%;
     position: absolute;
-    bottom: 50px;
+    bottom: 100px;
     left: calc(50% - 40px);
     background: url(../images/smiley.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 1;
 }
 
 .shape0{
@@ -77,7 +76,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 2;
 }
 
 .shape1{
@@ -89,7 +87,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 2;
 }
 
 .shape2{
@@ -101,7 +98,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 2;
 }
 .shape3{
     width: 50px;
@@ -112,7 +108,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 2;
 }
 
 .shape4{
@@ -124,7 +119,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 2;
 }
 
 .shape5{
@@ -136,7 +130,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 2;
 }
 .shape6{
     width: 50px;
@@ -147,7 +140,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 2;
+   
 }
 
 .shape7{
@@ -159,7 +152,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 2;
 }
 
 .shape8{
@@ -171,7 +163,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 2;
 }
 .shape9{
     width: 50px;
@@ -182,7 +173,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 2;
 }
 
 .shape10{
@@ -194,7 +184,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 2;
 }
 
 .shape11{
@@ -206,5 +195,4 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    z-index: 2;
 }
