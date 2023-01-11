@@ -31,11 +31,7 @@ body {
     position: absolute;
     top: 0;
 }
-    .score {
-        color: azure;
-        font-size: 30px;
-        margin-left: 10px;
-    }
+
 .buttonLeft {
     font-size: 30px;
     position: absolute;
