@@ -18,7 +18,7 @@
                 Score: 0
             </div>
             <div class="calculator col-4">
-                <span class="btn btn-success btn-sm mt-2">Calculator</span>
+                <span class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalCir">Calculator</span>
             </div>
         </div>
         <div class="alertBox p-5 bg-danger bg-gradient shadow">
@@ -26,16 +26,232 @@
             <div class="gameMessage"></div>
             <div class="buttonReplay btn btn-primary bg-gradient px-2" onclick="reloadGame()">Main Menu</div>
             <div class="playGame btn btn-success bg-gradient">Play Game</div>
-            <div class="btn btn-primary bg-gradient">Calculator</div>
+            <div class="btn btn-primary bg-gradient" data-bs-toggle="modal" data-bs-target="#modalCir">Calculator</div>
         </div>
         <div class="gameMenu alertBox p-4 bg-danger bg-gradient shadow">
             <div class="h1">Shape Muncher</div>
             <div class="playGame btn btn-success bg-gradient" onclick="generateShapes()">Play Game</div>
-            <div class="btn btn-primary bg-gradient">Calculator</div>
+            <div class="btn btn-primary bg-gradient" data-bs-toggle="modal" data-bs-target="#modalCir">Calculator</div>
         </div>
         <div class="buttonLeft btn btn-outline-dark px-4" onclick="moveEmojiLeft()">&lt</div>
         <div class="buttonRight btn btn-outline-dark px-4" onclick="moveEmojiRight()">&gt</div>
     </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" tabindex="-1" id="modalCir" aria-labelledby="modalCirLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Circle</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="number" id="radius" placeholder="Input radius">
+                    <h1 id="area">Area</h1>
+                    <h2 id="perimeter">Circumference</h2>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-target="#modalTri" data-bs-toggle="modal">Next</button>
+                    <button type="button" class="btn btn-primary" onclick="getCircle()">Calculate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" id="modalTri" aria-labelledby="modalTriLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Triangle</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="number" id="sideA" placeholder="Input side1">
+                    <input type="number" id="sideC" placeholder="Input side2">
+                    <input type="number" id="base" placeholder="Input base">
+                    <input type="number" id="height" placeholder="Input height">
+                    <h1 id="area">Area</h1>
+                    <h2 id="perimeter">Perimeter</h2>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-target="#modalCir" data-bs-toggle="modal">Back</button>
+                    <button type="button" class="btn btn-success" data-bs-target="#modalRec" data-bs-toggle="modal">Next</button>
+                    <button type="button" class="btn btn-primary" onclick="getTriangle()">Calculate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" id="modalRec" aria-labelledby="modalRecLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Rectangle</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="number" id="length" placeholder="Input length">
+                    <input type="number" id="width" placeholder="Input width">
+                    <h1 id="area">Area</h1>
+                    <h2 id="perimeter">Perimeter</h2>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-target="#modalTri" data-bs-toggle="modal">Back</button>
+                    <button type="button" class="btn btn-success" data-bs-target="#modalSqu" data-bs-toggle="modal">Next</button>
+                    <button type="button" class="btn btn-primary" onclick="getRectangle()">Calculate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" id="modalSqu" aria-labelledby="modalSquLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Square</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="number" id="side" placeholder="Input side">
+                    <h1 id="area">Area</h1>
+                    <h2 id="perimeter">Perimeter</h2>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-target="#modalRec" data-bs-toggle="modal">Back</button>
+                    <button type="button" class="btn btn-success" data-bs-target="#modalPar" data-bs-toggle="modal">Next</button>
+                    <button type="button" class="btn btn-primary" onclick="getSquare()">Calculate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" id="modalPar" aria-labelledby="modalParLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Parallelogram</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="number" id="sideA" placeholder="Input side">
+                    <input type="number" id="base" placeholder="Input base">
+                    <input type="number" id="height" placeholder="Input height">
+                    <h1 id="area">Area</h1>
+                    <h2 id="perimeter">Perimeter</h2>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-target="#modalSqu" data-bs-toggle="modal">Back</button>
+                    <button type="button" class="btn btn-success" data-bs-target="#modalTrap" data-bs-toggle="modal">Next</button>
+                    <button type="button" class="btn btn-primary" onclick="getParallelogram()">Calculate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" id="modalTrap" aria-labelledby="modalTrapLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Trapezoid</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="number" id="sideA" placeholder="Input side 1">
+                    <input type="number" id="sideC" placeholder="Input side 2">
+                    <input type="number" id="base1" placeholder="Input top">
+                    <input type="number" id="base2" placeholder="Input bottom">
+                    <input type="number" id= "height" placeholder="Input height">
+                    <h1 id="area">Area</h1>
+                    <h2 id="perimeter">Perimeter</h2>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-target="#modalPar" data-bs-toggle="modal">Back</button>
+                    <button type="button" class="btn btn-success" data-bs-target="#modalPen" data-bs-toggle="modal">Next</button>
+                    <button type="button" class="btn btn-primary" onclick="getTrapezoid()">Calculate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" id="modalPen" aria-labelledby="modalPenLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Pentagon</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="number" id="side" placeholder="Input side">
+                    <h1 id="area">Area</h1>
+                    <h2 id="perimeter">Perimeter</h2>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-target="#modalTrap" data-bs-toggle="modal">Back</button>
+                    <button type="button" class="btn btn-success" data-bs-target="#modalHex" data-bs-toggle="modal">Next</button>
+                    <button type="button" class="btn btn-primary" onclick="getPentagon()">Calculate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" id="modalHex" aria-labelledby="modalHexLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Hexagon</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="number" id="side" placeholder="Input side">
+                    <h1 id="area">Area</h1>
+                    <h2 id="perimeter">Perimeter</h2>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-target="#modalPen" data-bs-toggle="modal">Back</button>
+                    <button type="button" class="btn btn-success" data-bs-target="#modalOct" data-bs-toggle="modal">Next</button>
+                    <button type="button" class="btn btn-primary" onclick="getHexagon()">Calculate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" id="modalOct" aria-labelledby="modalOctLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Octagon</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="number" id="side" placeholder="Input side">
+                    <h1 id="area">Area</h1>
+                    <h2 id="perimeter">Perimeter</h2>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-target="#modalHex" data-bs-toggle="modal">Back</button>
+                    <button type="button" class="btn btn-success" data-bs-target="#modalK" data-bs-toggle="modal">Next</button>
+                    <button type="button" class="btn btn-primary" onclick="getOctagon()">Calculate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" tabindex="-1" id="modalK" aria-labelledby="modalKLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Kite</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="number" id="sideA" placeholder="Input side 1">
+                    <input type="number" id="sideB" placeholder="Input side 2">
+                    <input type="number" id="height" placeholder="Input height">
+                    <input type="number" id="width" placeholder="Input width">
+                    <h1 id="area">Area</h1>
+                    <h2 id="perimeter">Perimeter</h2>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-target="#modalOct" data-bs-toggle="modal">Back</button>
+                    <button type="button" class="btn btn-primary" onclick="getKite()">Calculate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal end -->
+
     <script src="./assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
