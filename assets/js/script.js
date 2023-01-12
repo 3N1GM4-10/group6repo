@@ -6,6 +6,7 @@ let emojiBottom = parseInt(window.getComputedStyle(emoji).getPropertyValue('bott
 document.getElementById("buttonLeft").style.display = 'block';
 document.getElementById("buttonRight").style.display = 'block';
 document.getElementById("alertBox").style.display = "none";
+document.getElementById("score").style.display = 'block';
 let score = 0;
 let lnum = 0
 
@@ -57,6 +58,7 @@ function generateShapes() {
                 document.getElementById("gameMessage").innerHTML = `Your Final Score is ${score}`;
                 document.getElementById("buttonLeft").style.display = 'none';
                 document.getElementById("buttonRight").style.display = 'none';
+                document.getElementById("score").style.display = 'none';
                 clearInterval(fallInterval);
                 clearInterval(shapeTimeout);
                 shapes.remove();
