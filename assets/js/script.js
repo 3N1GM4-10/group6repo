@@ -113,91 +113,91 @@ function getCircle(){
     let r = parseFloat(document.getElementById('radius').value);
     let X = Math.PI * r**2;
     let Y = 2 * Math.PI * r;
-    document.getElementById('area').innerHTML = X;
-    document.getElementById('perimeter').innerHTML = Y;
+    document.getElementById('areaCir').innerHTML = X;
+    document.getElementById('perimeterCir').innerHTML = Y;
 }
 
 function getTriangle(){
-    let a = parseFloat(document.getElementById('sideA').value);
-    let b = parseFloat(document.getElementById('base').value);
-    let c = parseFloat(document.getElementById('sideC').value);
-    let h = parseFloat(document.getElementById('height').value);
+    let a = parseFloat(document.getElementById('sideATri').value);
+    let b = parseFloat(document.getElementById('baseTri').value);
+    let c = parseFloat(document.getElementById('sideCTri').value);
+    let h = parseFloat(document.getElementById('heightTri').value);
     let X = 0.5 * b * h;
     let Y = a + b + c;
-    document.getElementById('area').innerHTML = X;
-    document.getElementById('perimeter').innerHTML = Y;
+    document.getElementById('areaTri').innerHTML = X;
+    document.getElementById('perimeterTri').innerHTML = Y;
 }
 
 function getRectangle() {
-    let l = parseFloat(document.getElementById('length').value);
-    let w = parseFloat(document.getElementById('width').value);
+    let l = parseFloat(document.getElementById('lengthRec').value);
+    let w = parseFloat(document.getElementById('widthRec').value);
     let X = l * w;
     let Y = 2 * (l + w);
-    document.getElementById('area').innerHTML = X;
-    document.getElementById('perimeter').innerHTML = Y;
+    document.getElementById('areaRec').innerHTML = X;
+    document.getElementById('perimeterRec').innerHTML = Y;
 }
 
 function getSquare() {
-    let s = parseFloat(document.getElementById('side').value);
+    let s = parseFloat(document.getElementById('sideSqu').value);
     let X = s**2;
     let Y = 4 * s;
-    document.getElementById('area').innerHTML = X;
-    document.getElementById('perimeter').innerHTML = Y;
+    document.getElementById('areaSqu').innerHTML = X;
+    document.getElementById('perimeterSqu').innerHTML = Y;
 }
 
 function getParallelogram() {
-    let a = parseFloat(document.getElementById('sideA').value);
-    let b = parseFloat(document.getElementById('base').value);
-    let h = parseFloat(document.getElementById('height').value);
+    let a = parseFloat(document.getElementById('sideAPar').value);
+    let b = parseFloat(document.getElementById('basePar').value);
+    let h = parseFloat(document.getElementById('heightPar').value);
     let X = b * h;
     let Y = 2 * (a + b);
-    document.getElementById('area').innerHTML = X;
-    document.getElementById('perimeter').innerHTML = Y;
+    document.getElementById('areaPar').innerHTML = X;
+    document.getElementById('perimeterPar').innerHTML = Y;
 }
 
 function getTrapezoid() {
-    let a = parseFloat(document.getElementById('sideA').value);
-    let b1 = parseFloat(document.getElementById('base1').value);
-    let b2 = parseFloat(document.getElementById('base2').value);
-    let c = parseFloat(document.getElementById('sideC').value);
-    let h = parseFloat(document.getElementById('height').value);
+    let a = parseFloat(document.getElementById('sideATrap').value);
+    let b1 = parseFloat(document.getElementById('base1Trap').value);
+    let b2 = parseFloat(document.getElementById('base2Trap').value);
+    let c = parseFloat(document.getElementById('sideCTrap').value);
+    let h = parseFloat(document.getElementById('heightTrap').value);
     let X = [(b1 + b2) / 2] * h;
     let Y = a + b1 +b2 + c;
-    document.getElementById('area').innerHTML = X;
-    document.getElementById('perimeter').innerHTML = Y;
+    document.getElementById('areaTrap').innerHTML = X;
+    document.getElementById('perimeterTrap').innerHTML = Y;
 }
 
 function getPentagon() {
-    let s = parseFloat(document.getElementById('side').value);
+    let s = parseFloat(document.getElementById('sidePen').value);
     let X = 0.25 * Math.sqrt(5 * [5 + 2 * Math.sqrt(5)]) * s**2;
     let Y = 5 * s;
-    document.getElementById('area').innerHTML = X;
-    document.getElementById('perimeter').innerHTML = Y;
+    document.getElementById('areaPen').innerHTML = X;
+    document.getElementById('perimeterPen').innerHTML = Y;
 }
 
 function getHexagon() {
-    let s = parseFloat(document.getElementById('side').value);
+    let s = parseFloat(document.getElementById('sideHex').value);
     let X = ([3 * Math.sqrt(3)] / 2) * s**2;
     let Y = 6 * s;
-    document.getElementById('area').innerHTML = X;
-    document.getElementById('perimeter').innerHTML = Y;
+    document.getElementById('areaHex').innerHTML = X;
+    document.getElementById('perimeterHex').innerHTML = Y;
 }
 
 function getOctagon() {
-    let s = parseFloat(document.getElementById('side').value);
+    let s = parseFloat(document.getElementById('sideOct').value);
     let X = 2 * [1 + Math.sqrt(2)] * s**2;
     let Y = 8 * s;
-    document.getElementById('area').innerHTML = X;
-    document.getElementById('perimeter').innerHTML = Y;
+    document.getElementById('areaOct').innerHTML = X;
+    document.getElementById('perimeterOct').innerHTML = Y;
 }
 
 function getKite() {
-    let a = parseFloat(document.getElementById('sideA').value);
-    let b = parseFloat(document.getElementById('sideB').value);
-    let h = parseFloat(document.getElementById('height').value);
-    let w = parseFloat(document.getElementById('width').value);
+    let a = parseFloat(document.getElementById('sideAK').value);
+    let b = parseFloat(document.getElementById('sideBK').value);
+    let h = parseFloat(document.getElementById('heightK').value);
+    let w = parseFloat(document.getElementById('widthK').value);
     let X = (h * w) / 2
     let Y = 2 * (a + b)
-    document.getElementById('area').innerHTML = X;
-    document.getElementById('perimeter').innerHTML = Y;
+    document.getElementById('areaK').innerHTML = X;
+    document.getElementById('perimeterK').innerHTML = Y;
 }
