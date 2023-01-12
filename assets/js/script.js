@@ -1,14 +1,18 @@
 let canvas = document.querySelector('.canvas');
 let emoji = document.querySelector('.emoji');
 let shapes = document.querySelector('.shapes');
+let scoreDiv = document.querySelector('.score');
+let padLeft = document.querySelector('.buttonLeft');
+let padRight = document.querySelector('.buttonRight');
+let buttonCalc = document.querySelector('.calculator');
+let gameAlertBox = document.querySelector('.alertBox');
+let mGameOver = document.querySelector('.gameOver');
+let mGameMessage = document.querySelector('.gameMessage');
 let emojiLeft = parseInt(window.getComputedStyle(emoji).getPropertyValue('left'));
 let emojiBottom = parseInt(window.getComputedStyle(emoji).getPropertyValue('bottom'));
-document.getElementById("buttonLeft").style.display = 'block';
-document.getElementById("buttonRight").style.display = 'block';
-document.getElementById("alertBox").style.display = "none";
-document.getElementById("score").style.display = 'block';
 let score = 0;
-let lnum = 0
+let stopper = 0;
+gameAlertBox.style.display = "none";
 
 function moveEmojiLeft(){
     if (emojiLeft >= 0) {
@@ -35,11 +39,11 @@ function control(e){
 }
 
 function displayScore() {
-    document.getElementById("score").innerHTML = `Score: ${score}`;
+    scoreDiv.innerHTML = `Score: ${score}`;
 }
 
 function generateShapes() {
-    if(lnum < 1) {
+    if(stopper < 1) {
         let shapeBottom = 600;
         let shapeLeft = Math.floor(Math.random() * 320);
         let shape = document.createElement('div');
@@ -53,17 +57,18 @@ function generateShapes() {
                 displayScore();
             }
             if(shapeBottom < emojiBottom){
-                document.getElementById("alertBox").style.display = 'block';
-                document.getElementById("gameOver").innerHTML = `Game Over!`;
-                document.getElementById("gameMessage").innerHTML = `Your Final Score is ${score}`;
-                document.getElementById("buttonLeft").style.display = 'none';
-                document.getElementById("buttonRight").style.display = 'none';
-                document.getElementById("score").style.display = 'none';
+                padLeft.style.display = 'none';
+                padRight.style.display = 'none';
+                scoreDiv.style.display = 'none';
+                buttonCalc.style.display = 'none';
+                gameAlertBox.style.display = 'block';
+                mGameOver.innerHTML = `Game Over!`;
+                mGameMessage.innerHTML = `Your Final Score is ${score}`;
                 clearInterval(fallInterval);
                 clearInterval(shapeTimeout);
                 shapes.remove();
                 emoji.remove();
-                ++lnum;
+                ++stopper;
             }
             shapeBottom -= 7;
             shape.style.bottom = shapeBottom + 'px';

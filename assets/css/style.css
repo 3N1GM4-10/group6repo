@@ -70,7 +70,6 @@ body {
 .shape0{
     width: 50px;
     height: 50px;
-    background-color: red;
     position: absolute;
     background: url(../images/circle.png);
     background-repeat: no-repeat;
@@ -81,7 +80,6 @@ body {
 .shape1{
     width: 50px;
     height: 50px;
-    background-color: blue;
     position: absolute;
     background: url(../images/cone.png);
     background-repeat: no-repeat;
@@ -92,17 +90,16 @@ body {
 .shape2{
     width: 50px;
     height: 50px;
-    background-color: green;
     position: absolute;
     background: url(../images/cube.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
+
 .shape3{
     width: 50px;
     height: 50px;
-    background-color: red;
     position: absolute;
     background: url(../images/cylinder.png);
     background-repeat: no-repeat;
@@ -113,7 +110,6 @@ body {
 .shape4{
     width: 50px;
     height: 50px;
-    background-color: blue;
     position: absolute;
     background: url(../images/kite.png);
     background-repeat: no-repeat;
@@ -124,7 +120,6 @@ body {
 .shape5{
     width: 50px;
     height: 50px;
-    background-color: yellow;
     position: absolute;
     background: url(../images/parallelogram.png);
     background-repeat: no-repeat;
@@ -134,7 +129,6 @@ body {
 .shape6{
     width: 50px;
     height: 50px;
-    background-color: indigo;
     position: absolute;
     background: url(../images/pyramid.png);
     background-repeat: no-repeat;
@@ -146,7 +140,6 @@ body {
 .shape7{
     width: 50px;
     height: 50px;
-    background-color: aquamarine;
     position: absolute;
     background: url(../images/rectangle.png);
     background-repeat: no-repeat;
@@ -157,7 +150,6 @@ body {
 .shape8{
     width: 50px;
     height: 50px;
-    background-color: orange;
     position: absolute;
     background: url(../images/sphere.png);
     background-repeat: no-repeat;
@@ -167,7 +159,6 @@ body {
 .shape9{
     width: 50px;
     height: 50px;
-    background-color: purple;
     position: absolute;
     background: url(../images/square.png);
     background-repeat: no-repeat;
@@ -178,7 +169,6 @@ body {
 .shape10{
     width: 50px;
     height: 50px;
-    background-color: powderblue;
     position: absolute;
     background: url(../images/trapezoid.png);
     background-repeat: no-repeat;
@@ -189,7 +179,6 @@ body {
 .shape11{
     width: 50px;
     height: 50px;
-    background-color: brown;
     position: absolute;
     background: url(../images/triangle.png);
     background-repeat: no-repeat;

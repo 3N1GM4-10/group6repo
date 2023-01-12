@@ -13,18 +13,21 @@
         <div class="shapes"></div>
         <div class="emoji"></div>
         <div class="floor"></div>
-        <div class="panel">
-            <div id="score" class="score text-center fw-bold text-light h1">
+        <div class="panel row m-0">
+            <div class="score col-8 text-center fw-bold text-light h1">
                 Score: 0
             </div>
+            <div class="calculator col-4">
+                <span class="btn btn-success btn-sm">Calculator</span>
+            </div>
         </div>
-        <div id="alertBox" class="alertBox p-5">
-            <div id="gameOver"></div>
-            <div id="gameMessage"></div>
+        <div class="alertBox p-5">
+            <div class="gameOver"></div>
+            <div class="gameMessage"></div>
             <div class="buttonReplay btn btn-primary px-4" onclick="replayGame()">Replay</div>
         </div>
-        <div id="buttonLeft" class="buttonLeft btn btn-outline-dark px-4" onclick="moveEmojiLeft()">&lt</div>
-        <button id="buttonRight" class="buttonRight btn btn-outline-dark px-4" onclick="moveEmojiRight()">&gt</button>
+        <div class="buttonLeft btn btn-outline-dark px-4" onclick="moveEmojiLeft()">&lt</div>
+        <button class="buttonRight btn btn-outline-dark px-4" onclick="moveEmojiRight()">&gt</button>
     </div>
     <script src="./assets/js/script.js"></script>
 </body>
