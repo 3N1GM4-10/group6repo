@@ -11,9 +11,9 @@
 <body>
     <div class="canvas">
         <div class="shapes"></div>
-        <div class="emoji"></div>
+        <div class="emoji shadow"></div>
         <div class="floor bg-success bg-gradient"></div>
-        <div class="panel row m-0 bg-primary bg-gradient">
+        <div class="panel row m-0 bg-primary bg-gradient shadow">
             <div class="score col-8 text-center fw-bold text-light h1">
                 Score: 0
             </div>
@@ -21,11 +21,17 @@
                 <span class="btn btn-success btn-sm mt-2">Calculator</span>
             </div>
         </div>
-        <div class="alertBox p-5">
+        <div class="alertBox p-5 bg-danger bg-gradient shadow">
             <div class="gameOver"></div>
             <div class="gameMessage"></div>
-            <div class="buttonReplay btn btn-primary px-4" onclick="replayGame()">Replay</div>
-            <div class="btn btn-primary">Calculator</div>
+            <div class="buttonReplay btn btn-primary bg-gradient px-2" onclick="reloadGame()">Main Menu</div>
+            <div class="playGame btn btn-success bg-gradient">Play Game</div>
+            <div class="btn btn-primary bg-gradient">Calculator</div>
+        </div>
+        <div class="gameMenu alertBox p-4 bg-danger bg-gradient shadow">
+            <div class="h1">Shape Muncher</div>
+            <div class="playGame btn btn-success bg-gradient" onclick="generateShapes()">Play Game</div>
+            <div class="btn btn-primary bg-gradient">Calculator</div>
         </div>
         <div class="buttonLeft btn btn-outline-dark px-4" onclick="moveEmojiLeft()">&lt</div>
         <div class="buttonRight btn btn-outline-dark px-4" onclick="moveEmojiRight()">&gt</div>

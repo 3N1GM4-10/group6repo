@@ -5,6 +5,8 @@ let scoreDiv = document.querySelector('.score');
 let padLeft = document.querySelector('.buttonLeft');
 let padRight = document.querySelector('.buttonRight');
 let buttonCalc = document.querySelector('.calculator');
+let buttonPlay = document.querySelector('.playGame');
+let gMenu = document.querySelector('.gameMenu');
 let gameAlertBox = document.querySelector('.alertBox');
 let mGameOver = document.querySelector('.gameOver');
 let mGameMessage = document.querySelector('.gameMessage');
@@ -12,6 +14,7 @@ let emojiLeft = parseInt(window.getComputedStyle(emoji).getPropertyValue('left')
 let emojiBottom = parseInt(window.getComputedStyle(emoji).getPropertyValue('bottom'));
 let score = 0;
 let stopper = 0;
+
 gameAlertBox.style.display = "none";
 
 function moveEmojiLeft(){
@@ -38,11 +41,26 @@ function control(e){
     }
 }
 
+function mainMenu(){
+    padLeft.style.display = "none";
+    padRight.style.display = "none";
+    scoreDiv.style.display = "none";
+    buttonCalc.style.display = "none";
+    emoji.style.display = "none";
+
+}
+
 function displayScore() {
     scoreDiv.innerHTML = `Score: ${score}`;
 }
 
 function generateShapes() {
+    gMenu.style.display = "none";
+    padLeft.style.display = "block";
+    padRight.style.display = "block";
+    scoreDiv.style.display = "block";
+    buttonCalc.style.display = "block";
+    emoji.style.display = "block";
     if(stopper < 1) {
         let shapeBottom = 600;
         let shapeLeft = Math.floor(Math.random() * 320);
@@ -61,6 +79,7 @@ function generateShapes() {
                 padRight.style.display = 'none';
                 scoreDiv.style.display = 'none';
                 buttonCalc.style.display = 'none';
+                buttonPlay.style.display = 'none';
                 gameAlertBox.style.display = 'block';
                 mGameOver.innerHTML = `Game Over!`;
                 mGameMessage.innerHTML = `Your Final Score is ${score}`;
@@ -69,6 +88,7 @@ function generateShapes() {
                 shapes.remove();
                 emoji.remove();
                 ++stopper;
+                return;
             }
             shapeBottom -= 7;
             shape.style.bottom = shapeBottom + 'px';
@@ -79,10 +99,10 @@ function generateShapes() {
     }
 }
 
-function replayGame(){
-location.reload();
+function reloadGame(){
+    location.reload();
 }
 
-generateShapes();
+mainMenu();
 
 document.addEventListener('keydown',control);
