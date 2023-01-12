@@ -54,7 +54,7 @@ function generateShapes() {
             if(shapeBottom < emojiBottom){
                 document.getElementById("alertBox").style.display = 'block';
                 document.getElementById("gameOver").innerHTML = `Game Over!`;
-                document.getElementById("gameMessage").innerHTML = `Contents Here!`;
+                document.getElementById("gameMessage").innerHTML = `Your Final Score is ${score}`;
                 document.getElementById("buttonLeft").style.display = 'none';
                 document.getElementById("buttonRight").style.display = 'none';
                 clearInterval(fallInterval);
